@@ -39,7 +39,5 @@
 @property NSInteger points;
 @property NSInteger score;
 @property BOOL isAlbum;
-@property NSData *imageData;
-@property (nonatomic, strong) UIImage *image;
 
 @end
