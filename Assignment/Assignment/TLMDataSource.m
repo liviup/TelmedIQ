@@ -45,9 +45,10 @@
                 galleryItem.datetime = [NSDate dateWithTimeIntervalSince1970:[item[@"datetime"] longLongValue]];
                 galleryItem.score = [item[@"score"] integerValue];
                 galleryItem.nsfw = [item[@"nsfw"] boolValue];
+                galleryItem.type = item[@"type"];
                 [TLMGalleryItem createOrUpdateInDefaultRealmWithValue:galleryItem];
             }
-            weakSelf.data = [TLMGalleryItem allObjects];
+            weakSelf.data = [TLMGalleryItem objectsInRealm:realm where:@"type BEGINSWITH[c] 'image'"];
             [weakSelf.delegate dataSourceDidLoad];
         }];
         
