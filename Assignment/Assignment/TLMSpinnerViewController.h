@@ -10,4 +10,7 @@
 
 @interface TLMSpinnerViewController : UIViewController
 
+- (void)presentInView:(UIView *)view;
+- (void)stopSpinning;
+
 @end

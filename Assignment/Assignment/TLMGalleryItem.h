@@ -7,20 +7,21 @@
 //
 
 #import <Realm/Realm.h>
+#import <UIKit/UIKit.h>
 
 @interface TLMGalleryItem : RLMObject
 
 @property NSString *itemId;
 @property NSString *title;
 @property NSString *itemDescription;
-@property NSTimeInterval datetime;
+@property NSDate *datetime;
 @property NSString *type;
 @property BOOL animated;
-@property NSUInteger width;
-@property NSUInteger height;
-@property NSUInteger size;
-@property NSUInteger views;
-@property NSUInteger bandwidth;
+@property NSInteger width;
+@property NSInteger height;
+@property NSInteger size;
+@property NSInteger views;
+@property NSInteger bandwidth;
 @property BOOL vote;//???
 @property BOOL favorite;
 @property BOOL nsfw;
@@ -32,11 +33,13 @@
 @property NSInteger topicId;
 @property NSString *link;
 @property BOOL isAd;
-@property NSUInteger commentCount;
-@property NSUInteger ups;
-@property NSUInteger downs;
-@property NSUInteger points;
-@property NSUInteger score;
+@property NSInteger commentCount;
+@property NSInteger ups;
+@property NSInteger downs;
+@property NSInteger points;
+@property NSInteger score;
 @property BOOL isAlbum;
+@property NSData *imageData;
+@property (nonatomic, strong) UIImage *image;
 
 @end

@@ -7,6 +7,11 @@
 //
 
 #import "TLMTableViewCell.h"
+#import "TLMGalleryItem.h"
+
+@interface TLMTableViewCell ()
+
+@end
 
 @implementation TLMTableViewCell
 
@@ -19,6 +24,15 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)configureWithGalleryItem:(TLMGalleryItem *)item {
+    self.titleLabel.text = item.title;
+    self.linkLabel.text = item.link;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    formatter.dateFormat = @"h:mm MMM d, yyyy";
+    self.dateLabel.text = [formatter stringFromDate:item.datetime];
 }
 
 @end

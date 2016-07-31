@@ -17,6 +17,14 @@
 		41F5AE1E1D4AED1F001159ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE1C1D4AED1F001159ED /* LaunchScreen.storyboard */; };
 		41F5AE291D4AED1F001159ED /* AssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE281D4AED1F001159ED /* AssignmentTests.m */; };
 		41F5AE341D4AED1F001159ED /* AssignmentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE331D4AED1F001159ED /* AssignmentUITests.m */; };
+		41F5AE441D4B0A11001159ED /* TLMDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE431D4B0A11001159ED /* TLMDataSource.m */; };
+		41F5AE471D4B11D3001159ED /* TLMGalleryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */; };
+		41F5AE4A1D4BBB6D001159ED /* TLMNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */; };
+		41F5AE4C1D4BFD26001159ED /* GalleryAPIInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */; };
+		41F5AE521D4C2648001159ED /* TLMSpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */; };
+		41F5AE531D4C2648001159ED /* TLMSpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */; };
+		41F5AE591D4C33C5001159ED /* TLMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */; };
+		41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +63,19 @@
 		41F5AE2F1D4AED1F001159ED /* AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F5AE331D4AED1F001159ED /* AssignmentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignmentUITests.m; sourceTree = "<group>"; };
 		41F5AE351D4AED1F001159ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F5AE421D4B0A11001159ED /* TLMDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMDataSource.h; sourceTree = "<group>"; };
+		41F5AE431D4B0A11001159ED /* TLMDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMDataSource.m; sourceTree = "<group>"; };
+		41F5AE451D4B11D3001159ED /* TLMGalleryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMGalleryItem.h; sourceTree = "<group>"; };
+		41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMGalleryItem.m; sourceTree = "<group>"; };
+		41F5AE481D4BBB6D001159ED /* TLMNetworkingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMNetworkingService.h; sourceTree = "<group>"; };
+		41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMNetworkingService.m; sourceTree = "<group>"; };
+		41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GalleryAPIInfo.plist; sourceTree = "<group>"; };
+		41F5AE4F1D4C2648001159ED /* TLMSpinnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMSpinnerViewController.h; sourceTree = "<group>"; };
+		41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMSpinnerViewController.m; sourceTree = "<group>"; };
+		41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLMSpinnerViewController.xib; sourceTree = "<group>"; };
+		41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMTableViewCell.h; sourceTree = "<group>"; };
+		41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMTableViewCell.m; sourceTree = "<group>"; };
+		41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLMTableViewCell.xib; sourceTree = "<group>"; };
 		63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		FB95231E14394E752633C7D8 /* libPods-Assignment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Assignment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,7 +120,6 @@
 			children = (
 				41F5AE0A1D4AED1F001159ED /* Assignment */,
 				41F5AE271D4AED1F001159ED /* AssignmentTests */,
-				41F5AE321D4AED1F001159ED /* AssignmentUITests */,
 				41F5AE091D4AED1F001159ED /* Products */,
 				9E8E3E64EF773298628AF961 /* Pods */,
 				25979DF84723DA2E3BD94383 /* Frameworks */,
@@ -119,6 +139,7 @@
 		41F5AE0A1D4AED1F001159ED /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE411D4B08E7001159ED /* DataSource */,
 				41F5AE0E1D4AED1F001159ED /* AppDelegate.h */,
 				41F5AE0F1D4AED1F001159ED /* AppDelegate.m */,
 				41F5AE111D4AED1F001159ED /* MasterViewController.h */,
@@ -130,6 +151,12 @@
 				41F5AE1C1D4AED1F001159ED /* LaunchScreen.storyboard */,
 				41F5AE1F1D4AED1F001159ED /* Info.plist */,
 				41F5AE0B1D4AED1F001159ED /* Supporting Files */,
+				41F5AE4F1D4C2648001159ED /* TLMSpinnerViewController.h */,
+				41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */,
+				41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */,
+				41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */,
+				41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */,
+				41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -137,6 +164,7 @@
 		41F5AE0B1D4AED1F001159ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE321D4AED1F001159ED /* AssignmentUITests */,
 				41F5AE0C1D4AED1F001159ED /* main.m */,
 			);
 			name = "Supporting Files";
@@ -158,6 +186,20 @@
 				41F5AE351D4AED1F001159ED /* Info.plist */,
 			);
 			path = AssignmentUITests;
+			sourceTree = SOURCE_ROOT;
+		};
+		41F5AE411D4B08E7001159ED /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE421D4B0A11001159ED /* TLMDataSource.h */,
+				41F5AE431D4B0A11001159ED /* TLMDataSource.m */,
+				41F5AE451D4B11D3001159ED /* TLMGalleryItem.h */,
+				41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */,
+				41F5AE481D4BBB6D001159ED /* TLMNetworkingService.h */,
+				41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */,
+				41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */,
+			);
+			name = DataSource;
 			sourceTree = "<group>";
 		};
 		9E8E3E64EF773298628AF961 /* Pods */ = {
@@ -275,9 +317,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F5AE4C1D4BFD26001159ED /* GalleryAPIInfo.plist in Resources */,
 				41F5AE1E1D4AED1F001159ED /* LaunchScreen.storyboard in Resources */,
+				41F5AE531D4C2648001159ED /* TLMSpinnerViewController.xib in Resources */,
 				41F5AE1B1D4AED1F001159ED /* Assets.xcassets in Resources */,
 				41F5AE191D4AED1F001159ED /* Main.storyboard in Resources */,
+				41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +395,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F5AE521D4C2648001159ED /* TLMSpinnerViewController.m in Sources */,
 				41F5AE101D4AED1F001159ED /* AppDelegate.m in Sources */,
+				41F5AE471D4B11D3001159ED /* TLMGalleryItem.m in Sources */,
 				41F5AE131D4AED1F001159ED /* MasterViewController.m in Sources */,
+				41F5AE4A1D4BBB6D001159ED /* TLMNetworkingService.m in Sources */,
+				41F5AE441D4B0A11001159ED /* TLMDataSource.m in Sources */,
+				41F5AE591D4C33C5001159ED /* TLMTableViewCell.m in Sources */,
 				41F5AE0D1D4AED1F001159ED /* main.m in Sources */,
 				41F5AE161D4AED1F001159ED /* DetailViewController.m in Sources */,
 			);

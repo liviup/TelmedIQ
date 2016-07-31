@@ -9,29 +9,27 @@
 #import "TLMSpinnerViewController.h"
 
 @interface TLMSpinnerViewController ()
-
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinnerView;
 @end
 
 @implementation TLMSpinnerViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+- (void)presentInView:(UIView *)view {
+    [self.view removeFromSuperview];
+    [view addSubview:self.view];
+    CGRect frame = self.view.frame;
+    frame.origin.x = (view.bounds.size.width - self.view.bounds.size.width) / 2;
+    frame.origin.y = (view.bounds.size.height - self.view.bounds.size.height) / 2 - 70;
+    self.view.frame = frame;
+    self.view.layer.cornerRadius = 6;
+    self.view.clipsToBounds = YES;
+    self.view.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
+    [self.spinnerView startAnimating];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)stopSpinning {
+    [self.spinnerView stopAnimating];
+    [self.view removeFromSuperview];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
