@@ -7,6 +7,8 @@
 //
 
 #import "DetailViewController.h"
+#import "TLMGalleryItem.h"
+#import <UIImageView+AFNetworking.h>
 
 @interface DetailViewController ()
 
@@ -28,7 +30,7 @@
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+        [self.imageView setImageWithURL:[NSURL URLWithString:self.detailItem.link]];
     }
 }
 

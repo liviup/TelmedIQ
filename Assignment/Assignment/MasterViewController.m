@@ -13,6 +13,10 @@
 #import "TLMSpinnerViewController.h"
 #import "TLMTableViewCell.h"
 
+static NSInteger const kCellViewHeight = 200;
+static NSString *const kDetailSegueID = @"showDetail";
+static NSString *const kCellIdentifier = @"TLMPreviewCell";
+
 @interface MasterViewController () <TLMDataSourceDelegate>
 
 @property TLMDataSource *dataSource;
@@ -24,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"TLMTableViewCell" bundle:nil] forCellReuseIdentifier:@"Cell1"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TLMTableViewCell" bundle:nil] forCellReuseIdentifier:kCellIdentifier];
 
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
@@ -52,14 +56,14 @@
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString:@"showDetail"]) {
-//        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-//        NSDate *object = self.dataSource[indexPath.row];
-//        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-//        [controller setDetailItem:object];
-//        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
-//        controller.navigationItem.leftItemsSupplementBackButton = YES;
-//    }
+    if ([[segue identifier] isEqualToString:kDetailSegueID]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        TLMGalleryItem *item = [self.dataSource itemAtIndex:indexPath.row];
+        DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+        [controller setDetailItem:item];
+        controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+        controller.navigationItem.leftItemsSupplementBackButton = YES;
+    }
 }
 
 #pragma mark - Table View
@@ -73,18 +77,18 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TLMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell1" forIndexPath:indexPath];
+    TLMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
 
     [cell configureWithGalleryItem:[self.dataSource itemAtIndex:indexPath.row]];
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    return NO;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kDetailSegueID sender:self];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 250;
+    return kCellViewHeight;
 }
 
 - (void)dataSourceDidLoad {

@@ -14,8 +14,4 @@
     return @"itemId";
 }
 
-+ (NSArray *)ignoredProperties {
-    return @[@"image"];
-}
-
 @end

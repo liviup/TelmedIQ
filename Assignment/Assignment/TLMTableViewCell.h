@@ -17,7 +17,9 @@
 @property (nonatomic, weak) IBOutlet UILabel *scoreLabel;
 @property (nonatomic, weak) IBOutlet UILabel *nsfwLabel;
 @property (nonatomic, weak) IBOutlet UIImageView *previewImageView;
-
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, weak) IBOutlet UIButton *favoriteButton;
+- (IBAction)toggleFavorite:(id)sender;
 - (void)configureWithGalleryItem:(TLMGalleryItem *)item;
 
 @end

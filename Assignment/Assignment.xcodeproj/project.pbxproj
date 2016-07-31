@@ -25,6 +25,14 @@
 		41F5AE531D4C2648001159ED /* TLMSpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */; };
 		41F5AE591D4C33C5001159ED /* TLMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */; };
 		41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */; };
+		41F5AE5E1D4E74AA001159ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE5D1D4E74AA001159ED /* Localizable.strings */; };
+		41F5AE661D4E98E1001159ED /* heartActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE601D4E98E1001159ED /* heartActive@2x.png */; };
+		41F5AE671D4E98E1001159ED /* heartActive@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE611D4E98E1001159ED /* heartActive@3x.png */; };
+		41F5AE681D4E98E1001159ED /* heart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE621D4E98E1001159ED /* heart@3x.png */; };
+		41F5AE691D4E98E1001159ED /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE631D4E98E1001159ED /* heart@2x.png */; };
+		41F5AE6A1D4E98E1001159ED /* heartActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE641D4E98E1001159ED /* heartActive.png */; };
+		41F5AE6B1D4E98E1001159ED /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE651D4E98E1001159ED /* heart.png */; };
+		41F5AE6D1D4E98FA001159ED /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE6C1D4E98FA001159ED /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +84,14 @@
 		41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMTableViewCell.h; sourceTree = "<group>"; };
 		41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMTableViewCell.m; sourceTree = "<group>"; };
 		41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLMTableViewCell.xib; sourceTree = "<group>"; };
+		41F5AE5D1D4E74AA001159ED /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		41F5AE601D4E98E1001159ED /* heartActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartActive@2x.png"; sourceTree = "<group>"; };
+		41F5AE611D4E98E1001159ED /* heartActive@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartActive@3x.png"; sourceTree = "<group>"; };
+		41F5AE621D4E98E1001159ED /* heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@3x.png"; sourceTree = "<group>"; };
+		41F5AE631D4E98E1001159ED /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
+		41F5AE641D4E98E1001159ED /* heartActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartActive.png; sourceTree = "<group>"; };
+		41F5AE651D4E98E1001159ED /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		41F5AE6C1D4E98FA001159ED /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		FB95231E14394E752633C7D8 /* libPods-Assignment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Assignment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -139,6 +155,7 @@
 		41F5AE0A1D4AED1F001159ED /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE5F1D4E98B8001159ED /* Images */,
 				41F5AE411D4B08E7001159ED /* DataSource */,
 				41F5AE0E1D4AED1F001159ED /* AppDelegate.h */,
 				41F5AE0F1D4AED1F001159ED /* AppDelegate.m */,
@@ -164,6 +181,7 @@
 		41F5AE0B1D4AED1F001159ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE5C1D4E7488001159ED /* en.lproj */,
 				41F5AE321D4AED1F001159ED /* AssignmentUITests */,
 				41F5AE0C1D4AED1F001159ED /* main.m */,
 			);
@@ -200,6 +218,28 @@
 				41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */,
 			);
 			name = DataSource;
+			sourceTree = "<group>";
+		};
+		41F5AE5C1D4E7488001159ED /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE5D1D4E74AA001159ED /* Localizable.strings */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
+		41F5AE5F1D4E98B8001159ED /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE6C1D4E98FA001159ED /* placeholder.png */,
+				41F5AE601D4E98E1001159ED /* heartActive@2x.png */,
+				41F5AE611D4E98E1001159ED /* heartActive@3x.png */,
+				41F5AE621D4E98E1001159ED /* heart@3x.png */,
+				41F5AE631D4E98E1001159ED /* heart@2x.png */,
+				41F5AE641D4E98E1001159ED /* heartActive.png */,
+				41F5AE651D4E98E1001159ED /* heart.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		9E8E3E64EF773298628AF961 /* Pods */ = {
@@ -319,10 +359,18 @@
 			files = (
 				41F5AE4C1D4BFD26001159ED /* GalleryAPIInfo.plist in Resources */,
 				41F5AE1E1D4AED1F001159ED /* LaunchScreen.storyboard in Resources */,
+				41F5AE691D4E98E1001159ED /* heart@2x.png in Resources */,
+				41F5AE681D4E98E1001159ED /* heart@3x.png in Resources */,
 				41F5AE531D4C2648001159ED /* TLMSpinnerViewController.xib in Resources */,
+				41F5AE5E1D4E74AA001159ED /* Localizable.strings in Resources */,
 				41F5AE1B1D4AED1F001159ED /* Assets.xcassets in Resources */,
+				41F5AE6B1D4E98E1001159ED /* heart.png in Resources */,
 				41F5AE191D4AED1F001159ED /* Main.storyboard in Resources */,
+				41F5AE671D4E98E1001159ED /* heartActive@3x.png in Resources */,
 				41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */,
+				41F5AE6D1D4E98FA001159ED /* placeholder.png in Resources */,
+				41F5AE6A1D4E98E1001159ED /* heartActive.png in Resources */,
+				41F5AE661D4E98E1001159ED /* heartActive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
