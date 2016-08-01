@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		206BD13A188B50E29F1851B6 /* libPods-Assignment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB95231E14394E752633C7D8 /* libPods-Assignment.a */; };
+		41764FDB1D4F497200EC1020 /* telmediq_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 41764FDA1D4F497200EC1020 /* telmediq_logo.png */; };
 		41F5AE0D1D4AED1F001159ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE0C1D4AED1F001159ED /* main.m */; };
 		41F5AE101D4AED1F001159ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE0F1D4AED1F001159ED /* AppDelegate.m */; };
 		41F5AE131D4AED1F001159ED /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE121D4AED1F001159ED /* MasterViewController.m */; };
@@ -54,6 +55,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41764FDA1D4F497200EC1020 /* telmediq_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telmediq_logo.png; sourceTree = "<group>"; };
 		41F5AE081D4AED1F001159ED /* Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F5AE0C1D4AED1F001159ED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		41F5AE0E1D4AED1F001159ED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 		41F5AE5F1D4E98B8001159ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				41764FDA1D4F497200EC1020 /* telmediq_logo.png */,
 				41F5AE651D4E98E1001159ED /* heart.png */,
 				41F5AE631D4E98E1001159ED /* heart@2x.png */,
 				41F5AE621D4E98E1001159ED /* heart@3x.png */,
@@ -393,6 +396,7 @@
 				41F5AE1B1D4AED1F001159ED /* Assets.xcassets in Resources */,
 				41F5AE6B1D4E98E1001159ED /* heart.png in Resources */,
 				41F5AE191D4AED1F001159ED /* Main.storyboard in Resources */,
+				41764FDB1D4F497200EC1020 /* telmediq_logo.png in Resources */,
 				41F5AE671D4E98E1001159ED /* heartActive@3x.png in Resources */,
 				41F5AE6F1D4ED007001159ED /* placeholder_600x400.png in Resources */,
 				41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */,
