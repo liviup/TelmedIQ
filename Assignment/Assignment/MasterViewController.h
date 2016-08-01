@@ -12,8 +12,10 @@
 
 @interface MasterViewController : UITableViewController
 
+/**
+ * @brief Master view with a table view of feed of gallery items.
+ */
 @property (strong, nonatomic) DetailViewController *detailViewController;
-
 
 @end
 

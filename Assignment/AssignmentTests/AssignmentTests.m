@@ -7,6 +7,9 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "TLMDataSource.h"
+#import "TLMGalleryItem.h"
+#import "TLMNetworkingService.h"
 
 @interface AssignmentTests : XCTestCase
 

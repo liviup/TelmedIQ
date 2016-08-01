@@ -10,10 +10,19 @@
 
 @class TLMGalleryItem;
 
+/**
+ * @brief Detail view for gallery item.
+ */
 @interface DetailViewController : UIViewController
 
+/**
+ * @property detailItem Gallery item to display details for.
+ */
 @property (strong, nonatomic) TLMGalleryItem *detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+
+/**
+ * @property imageView ImageView diplays the image of the detailItem.
+ */
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end

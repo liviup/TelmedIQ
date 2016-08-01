@@ -12,6 +12,11 @@
 
 @interface DetailViewController ()
 
+/**
+ * @brief Heart button to un/favorite item.
+ */
+@property (nonatomic, weak) IBOutlet UIButton *favoriteButton;
+
 @end
 
 @implementation DetailViewController
@@ -21,7 +26,7 @@
 - (void)setDetailItem:(id)newDetailItem {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-            
+        
         // Update the view.
         [self configureView];
     }
@@ -29,8 +34,9 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
-    if (self.detailItem) {
-        [self.imageView setImageWithURL:[NSURL URLWithString:self.detailItem.link]];
+    if (self.detailItem && !self.detailItem.nsfw) {
+        [self.imageView setImageWithURL:[NSURL URLWithString:self.detailItem.link] placeholderImage:[UIImage imageNamed:@"placeholder_600x400"]];
+        self.favoriteButton.selected = self.detailItem.favorite;
     }
 }
 
@@ -40,9 +46,13 @@
     [self configureView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)toggleFavorite:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    TLMGalleryItem *item = self.detailItem;
+    [realm transactionWithBlock:^{
+        item.favorite = sender.selected;
+    }];
 }
 
 @end

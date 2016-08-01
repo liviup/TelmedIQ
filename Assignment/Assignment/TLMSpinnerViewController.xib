@@ -13,14 +13,14 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" alpha="0.69999999999999996" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="218" height="97"/>
+            <rect key="frame" x="0.0" y="0.0" width="191" height="97"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sxH-iP-p3M">
-                    <rect key="frame" x="91" y="18" width="37" height="41"/>
+                    <rect key="frame" x="77" y="18" width="37" height="41"/>
                 </activityIndicatorView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJP-hy-OHm">
-                    <rect key="frame" x="72" y="66" width="75" height="21"/>
+                    <rect key="frame" x="58" y="66" width="75" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="Bqj-zX-VrP"/>
                     </constraints>
@@ -41,7 +41,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="340" y="180.5"/>
+            <point key="canvasLocation" x="340.5" y="180.5"/>
         </view>
     </objects>
 </document>

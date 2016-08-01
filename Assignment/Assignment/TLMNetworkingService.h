@@ -10,10 +10,24 @@
 
 @class TLMData;
 
+/**
+ * @brief Success block called when network call was successful.
+ */
 typedef void(^TLMNetworkingServiceSuccessBlock)(NSDictionary *responseData);
+
+/**
+ * @brief Error block called if network call failed.
+ */
 typedef void(^TLMNetworkingServiceErrorBlock)(NSError *error);
 
+/**
+ * @brief Provides basic networking service for the application.
+ */
 @interface TLMNetworkingService : NSObject
+
+/**
+ * @brief Singleton instance of service object.
+ */
 + (instancetype)sharedService;
 
 - (void)loadFeedDataOnSuccess:(TLMNetworkingServiceSuccessBlock)onSuccess

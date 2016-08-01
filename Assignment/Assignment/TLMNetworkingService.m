@@ -25,13 +25,13 @@ static NSString *const GALLERY_API_PROPERTY_KEY = @"Gallery API";
 @implementation TLMNetworkingService
 
 + (instancetype)sharedService {
-    static TLMNetworkingService *instance;
+    static TLMNetworkingService *INSTANCE;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        instance = [[TLMNetworkingService alloc] init];
-        [instance loadGalleryAPIInfo];
+        INSTANCE = [[TLMNetworkingService alloc] init];
+        [INSTANCE loadGalleryAPIInfo];
     });
-    return instance;
+    return INSTANCE;
 }
 
 - (void)loadFeedDataOnSuccess:(TLMNetworkingServiceSuccessBlock)onSuccess

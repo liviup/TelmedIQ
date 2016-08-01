@@ -2,7 +2,7 @@
 //  TLMTableViewCell.h
 //  Assignment
 //
-//  Created by Tatiana Patrasco on 7/29/16.
+//  Created by Liviu Patrasco on 7/29/16.
 //  Copyright © 2016 Liviu Patrasco. All rights reserved.
 //
 
@@ -10,7 +10,11 @@
 
 @class TLMGalleryItem;
 
+/**
+ * @brief Tableview cell, displays a gallery item preview image with some text info about it.
+ */
 @interface TLMTableViewCell : UITableViewCell
+
 @property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *linkLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dateLabel;
@@ -19,7 +23,15 @@
 @property (nonatomic, weak) IBOutlet UIImageView *previewImageView;
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, weak) IBOutlet UIButton *favoriteButton;
-- (IBAction)toggleFavorite:(id)sender;
+
+/**
+ * @brief Toggles the favorite property of the item.
+ */
+- (IBAction)toggleFavorite:(UIButton *)sender;
+
+/**
+ * @brief Activity view with a spinner.
+ */
 - (void)configureWithGalleryItem:(TLMGalleryItem *)item;
 
 @end

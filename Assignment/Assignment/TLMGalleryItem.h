@@ -9,9 +9,16 @@
 #import <Realm/Realm.h>
 #import <UIKit/UIKit.h>
 
+/**
+ * @class An object containing all the info for a gallery item.
+ */
 @interface TLMGalleryItem : RLMObject
 
+/**
+ * @brief Primary Key
+ */
 @property NSString *itemId;
+
 @property NSString *title;
 @property NSString *itemDescription;
 @property NSDate *datetime;
@@ -22,7 +29,7 @@
 @property NSInteger size;
 @property NSInteger views;
 @property NSInteger bandwidth;
-@property BOOL vote;//???
+@property NSString *vote;
 @property BOOL favorite;
 @property BOOL nsfw;
 @property NSString *section;

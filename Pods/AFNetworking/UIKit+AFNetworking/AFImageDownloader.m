@@ -110,8 +110,8 @@
 @implementation AFImageDownloader
 
 + (NSURLCache *)defaultURLCache {
-    return [[NSURLCache alloc] initWithMemoryCapacity:20 * 1024 * 1024
-                                         diskCapacity:150 * 1024 * 1024
+    return [[NSURLCache alloc] initWithMemoryCapacity:220 * 1024 * 1024
+                                         diskCapacity:350 * 1024 * 1024
                                              diskPath:@"com.alamofire.imagedownloader"];
 }
 
@@ -138,7 +138,7 @@
 
     return [self initWithSessionManager:sessionManager
                  downloadPrioritization:AFImageDownloadPrioritizationFIFO
-                 maximumActiveDownloads:4
+                 maximumActiveDownloads:7
                              imageCache:[[AFAutoPurgingImageCache alloc] init]];
 }
 

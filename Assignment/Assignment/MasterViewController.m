@@ -12,8 +12,9 @@
 #import "TLMGalleryItem.h"
 #import "TLMSpinnerViewController.h"
 #import "TLMTableViewCell.h"
+#import <AFNetworkReachabilityManager.h>
 
-static NSInteger const kCellViewHeight = 200;
+static NSInteger const kCellViewHeight = 250;
 static NSString *const kDetailSegueID = @"showDetail";
 static NSString *const kCellIdentifier = @"TLMPreviewCell";
 
@@ -33,6 +34,19 @@ static NSString *const kCellIdentifier = @"TLMPreviewCell";
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     self.dataSource = [[TLMDataSource alloc] initWithDelegate:self];
+    
+    __weak typeof(self) weakSelf = self;
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                [weakSelf reload];
+                break;
+                
+            default:
+                break;
+        }
+    }];
 
     self.spinner = [[TLMSpinnerViewController alloc] init];
     [self reload];
@@ -90,6 +104,8 @@ static NSString *const kCellIdentifier = @"TLMPreviewCell";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return kCellViewHeight;
 }
+
+#pragma mark - TLMDataSourceDelegate
 
 - (void)dataSourceDidLoad {
     [self.tableView reloadData];

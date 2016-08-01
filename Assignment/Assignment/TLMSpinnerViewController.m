@@ -9,7 +9,9 @@
 #import "TLMSpinnerViewController.h"
 
 @interface TLMSpinnerViewController ()
+
 @property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinnerView;
+
 @end
 
 @implementation TLMSpinnerViewController

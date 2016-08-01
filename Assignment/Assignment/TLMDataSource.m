@@ -13,6 +13,11 @@
 
 @interface TLMDataSource ()
 
+/**
+ * @brief Array holds data retrieved from server.
+ *
+ * @property data Array with data to display.
+ */
 @property (nonatomic, strong) RLMResults<TLMGalleryItem *> *data;
 
 @end
@@ -37,6 +42,8 @@
         [realm transactionWithBlock:^{
             
             NSArray *items = [responseData objectForKey:@"data"];
+            [realm deleteAllObjects];
+            
             for (NSDictionary *item in items) {
                 TLMGalleryItem *galleryItem = [[TLMGalleryItem alloc] init];
                 galleryItem.itemId = item[@"id"];
@@ -48,14 +55,14 @@
                 galleryItem.type = item[@"type"];
                 [TLMGalleryItem createOrUpdateInDefaultRealmWithValue:galleryItem];
             }
-            weakSelf.data = [TLMGalleryItem objectsInRealm:realm where:@"type BEGINSWITH[c] 'image'"];
-            [weakSelf.delegate dataSourceDidLoad];
+            [weakSelf updateResults];
         }];
         
     } onFailure:^(NSError *error) {
+        
         if (error.code == kCFURLErrorNotConnectedToInternet || [[TLMGalleryItem allObjects] count] > 0) {
-            weakSelf.data = [TLMGalleryItem allObjects];
-            [weakSelf.delegate dataSourceDidLoad];
+            
+            [weakSelf updateResults];
         }
         
         NSLog(@"%@", error);
@@ -70,6 +77,13 @@
     return self.data.count;
 }
 
+#pragma mark - Private methods
+
+- (void)updateResults {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    self.data = [TLMGalleryItem objectsInRealm:realm where:@"type BEGINSWITH[c] 'image'"];
+    [self.delegate dataSourceDidLoad];
+}
 
 @end
 

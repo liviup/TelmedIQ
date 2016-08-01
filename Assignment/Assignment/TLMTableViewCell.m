@@ -10,7 +10,8 @@
 #import "TLMGalleryItem.h"
 #import <UIImageView+AFNetworking.h>
 
-#define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder"]
+#define PLACEHOLDER_IMAGE [UIImage imageNamed:@"placeholder_600x400"]
+static NSString *const kKeyPathToObserve = @"favorite";
 
 @interface TLMTableViewCell ()
 @property (nonatomic, strong) NSDateFormatter *dateFormatter;
@@ -22,6 +23,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    self.contentView.layer.shadowRadius = 4;
+    self.contentView.layer.shadowOpacity = .8;
+    self.contentView.layer.shadowOffset = CGSizeMake(-1, 1);
+    self.contentView.layer.masksToBounds = NO;
+    self.previewImageView.layer.borderWidth = .5;
     self.dateFormatter = [[NSDateFormatter alloc] init];
     self.dateFormatter.dateFormat = @"h:mm a MMM d, yyyy";
 }
@@ -34,6 +40,7 @@
     self.nsfwLabel.text = nil;
     self.favoriteButton.selected = NO;
     [self.previewImageView setImage:PLACEHOLDER_IMAGE];
+    [self.item removeObserver:self forKeyPath:kKeyPathToObserve];
 }
 
 - (void)configureWithGalleryItem:(TLMGalleryItem *)item {
@@ -42,13 +49,21 @@
     self.linkLabel.text = item.link;
     self.dateLabel.text = [self.dateFormatter stringFromDate:item.datetime];
     self.scoreLabel.text = [NSString stringWithFormat:@"%@:%lu", NSLocalizedString(@"Score", @"Score"), (long)item.score];
-    self.nsfwLabel.text = item.nsfw ? NSLocalizedString(@"true", @"True value") : NSLocalizedString(@"false", @"False value");
+    self.nsfwLabel.text = item.nsfw ? NSLocalizedString(@"True", @"True value") : NSLocalizedString(@"False", @"False value");
     self.favoriteButton.selected = item.favorite;
+    
+    [item addObserver:self forKeyPath:@"favorite" options:NSKeyValueObservingOptionNew context:nil];
     
     if (item.nsfw) {
         self.previewImageView.image = PLACEHOLDER_IMAGE;
     } else {
         [self setImageWithItem:item];
+    }
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(TLMGalleryItem *)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:kKeyPathToObserve]) {
+        self.favoriteButton.selected = object.favorite;
     }
 }
 
@@ -76,12 +91,11 @@
 }
 
 - (IBAction)toggleFavorite:(UIButton *)sender {
-    sender.selected = !sender.selected;
     RLMRealm *realm = [RLMRealm defaultRealm];
     TLMGalleryItem *item = self.item;
-    [realm transactionWithBlock:^{
-        item.favorite = sender.selected;
-    }];
+    [realm beginWriteTransaction];
+    item.favorite = !sender.selected;
+    [realm commitWriteTransaction];
 }
 
 @end
