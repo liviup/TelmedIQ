@@ -44,7 +44,10 @@ static NSString *const GALLERY_API_PROPERTY_KEY = @"Gallery API";
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager.requestSerializer setValue:[NSString stringWithFormat:@"Client-ID %@", self.clientId] forHTTPHeaderField:@"Authorization"];
 
-    [manager GET:self.galleryAPI parameters:nil progress:nil success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
+    [manager GET:self.galleryAPI
+      parameters:nil
+        progress:nil
+         success:^(NSURLSessionTask *task, NSDictionary *responseObject) {
         
         if (onSuccess) {
             onSuccess(responseObject);

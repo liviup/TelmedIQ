@@ -79,7 +79,6 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="detailDescriptionLabel" destination="0XM-y9-sOw" id="deQ-Na-JPF"/>
                         <outlet property="favoriteButton" destination="tmu-kk-Ess" id="yZq-ft-ADc"/>
                         <outlet property="imageView" destination="0ab-yl-2sV" id="7Cb-tG-3TW"/>
                     </connections>

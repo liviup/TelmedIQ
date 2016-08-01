@@ -30,6 +30,11 @@ typedef void(^TLMNetworkingServiceErrorBlock)(NSError *error);
  */
 + (instancetype)sharedService;
 
+/**
+ * @method loadFeedDataOnSuccess:onFailure:
+ *
+ * @brief Loads gallery feed data and calls onSuccess on success or onFailure on failure.
+ */
 - (void)loadFeedDataOnSuccess:(TLMNetworkingServiceSuccessBlock)onSuccess
                   onFailure:(TLMNetworkingServiceErrorBlock)onFailure;
 @end

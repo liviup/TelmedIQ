@@ -32,7 +32,6 @@
 		41F5AE691D4E98E1001159ED /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE631D4E98E1001159ED /* heart@2x.png */; };
 		41F5AE6A1D4E98E1001159ED /* heartActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE641D4E98E1001159ED /* heartActive.png */; };
 		41F5AE6B1D4E98E1001159ED /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE651D4E98E1001159ED /* heart.png */; };
-		41F5AE6D1D4E98FA001159ED /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE6C1D4E98FA001159ED /* placeholder.png */; };
 		41F5AE6F1D4ED007001159ED /* placeholder_600x400.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */; };
 		701DF574AF9B9543C9298CF8 /* libPods-AssignmentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */; };
 /* End PBXBuildFile section */
@@ -93,7 +92,6 @@
 		41F5AE631D4E98E1001159ED /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
 		41F5AE641D4E98E1001159ED /* heartActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartActive.png; sourceTree = "<group>"; };
 		41F5AE651D4E98E1001159ED /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
-		41F5AE6C1D4E98FA001159ED /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_600x400.png; sourceTree = "<group>"; };
 		63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -163,25 +161,17 @@
 		41F5AE0A1D4AED1F001159ED /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE711D4F3099001159ED /* Networking */,
+				41F5AE701D4F2FE1001159ED /* ViewControllers */,
 				41F5AE5F1D4E98B8001159ED /* Images */,
 				41F5AE411D4B08E7001159ED /* DataSource */,
 				41F5AE0E1D4AED1F001159ED /* AppDelegate.h */,
 				41F5AE0F1D4AED1F001159ED /* AppDelegate.m */,
-				41F5AE111D4AED1F001159ED /* MasterViewController.h */,
-				41F5AE121D4AED1F001159ED /* MasterViewController.m */,
-				41F5AE141D4AED1F001159ED /* DetailViewController.h */,
-				41F5AE151D4AED1F001159ED /* DetailViewController.m */,
 				41F5AE171D4AED1F001159ED /* Main.storyboard */,
 				41F5AE1A1D4AED1F001159ED /* Assets.xcassets */,
 				41F5AE1C1D4AED1F001159ED /* LaunchScreen.storyboard */,
 				41F5AE1F1D4AED1F001159ED /* Info.plist */,
 				41F5AE0B1D4AED1F001159ED /* Supporting Files */,
-				41F5AE4F1D4C2648001159ED /* TLMSpinnerViewController.h */,
-				41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */,
-				41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */,
-				41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */,
-				41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */,
-				41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -217,13 +207,11 @@
 		41F5AE411D4B08E7001159ED /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */,
 				41F5AE421D4B0A11001159ED /* TLMDataSource.h */,
 				41F5AE431D4B0A11001159ED /* TLMDataSource.m */,
 				41F5AE451D4B11D3001159ED /* TLMGalleryItem.h */,
 				41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */,
-				41F5AE481D4BBB6D001159ED /* TLMNetworkingService.h */,
-				41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */,
-				41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */,
 			);
 			name = DataSource;
 			sourceTree = "<group>";
@@ -239,16 +227,41 @@
 		41F5AE5F1D4E98B8001159ED /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */,
-				41F5AE6C1D4E98FA001159ED /* placeholder.png */,
+				41F5AE651D4E98E1001159ED /* heart.png */,
+				41F5AE631D4E98E1001159ED /* heart@2x.png */,
+				41F5AE621D4E98E1001159ED /* heart@3x.png */,
+				41F5AE641D4E98E1001159ED /* heartActive.png */,
 				41F5AE601D4E98E1001159ED /* heartActive@2x.png */,
 				41F5AE611D4E98E1001159ED /* heartActive@3x.png */,
-				41F5AE621D4E98E1001159ED /* heart@3x.png */,
-				41F5AE631D4E98E1001159ED /* heart@2x.png */,
-				41F5AE641D4E98E1001159ED /* heartActive.png */,
-				41F5AE651D4E98E1001159ED /* heart.png */,
+				41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		41F5AE701D4F2FE1001159ED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE141D4AED1F001159ED /* DetailViewController.h */,
+				41F5AE151D4AED1F001159ED /* DetailViewController.m */,
+				41F5AE111D4AED1F001159ED /* MasterViewController.h */,
+				41F5AE121D4AED1F001159ED /* MasterViewController.m */,
+				41F5AE4F1D4C2648001159ED /* TLMSpinnerViewController.h */,
+				41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */,
+				41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */,
+				41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */,
+				41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */,
+				41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41F5AE711D4F3099001159ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE481D4BBB6D001159ED /* TLMNetworkingService.h */,
+				41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		9E8E3E64EF773298628AF961 /* Pods */ = {
@@ -383,7 +396,6 @@
 				41F5AE671D4E98E1001159ED /* heartActive@3x.png in Resources */,
 				41F5AE6F1D4ED007001159ED /* placeholder_600x400.png in Resources */,
 				41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */,
-				41F5AE6D1D4E98FA001159ED /* placeholder.png in Resources */,
 				41F5AE6A1D4E98E1001159ED /* heartActive.png in Resources */,
 				41F5AE661D4E98E1001159ED /* heartActive@2x.png in Resources */,
 			);
