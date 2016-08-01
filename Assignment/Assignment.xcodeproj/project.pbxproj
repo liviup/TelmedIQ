@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		206BD13A188B50E29F1851B6 /* libPods-Assignment.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB95231E14394E752633C7D8 /* libPods-Assignment.a */; };
 		41F5AE0D1D4AED1F001159ED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE0C1D4AED1F001159ED /* main.m */; };
 		41F5AE101D4AED1F001159ED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE0F1D4AED1F001159ED /* AppDelegate.m */; };
 		41F5AE131D4AED1F001159ED /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE121D4AED1F001159ED /* MasterViewController.m */; };
@@ -16,6 +17,23 @@
 		41F5AE1E1D4AED1F001159ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE1C1D4AED1F001159ED /* LaunchScreen.storyboard */; };
 		41F5AE291D4AED1F001159ED /* AssignmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE281D4AED1F001159ED /* AssignmentTests.m */; };
 		41F5AE341D4AED1F001159ED /* AssignmentUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE331D4AED1F001159ED /* AssignmentUITests.m */; };
+		41F5AE441D4B0A11001159ED /* TLMDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE431D4B0A11001159ED /* TLMDataSource.m */; };
+		41F5AE471D4B11D3001159ED /* TLMGalleryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */; };
+		41F5AE4A1D4BBB6D001159ED /* TLMNetworkingService.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */; };
+		41F5AE4C1D4BFD26001159ED /* GalleryAPIInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */; };
+		41F5AE521D4C2648001159ED /* TLMSpinnerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */; };
+		41F5AE531D4C2648001159ED /* TLMSpinnerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */; };
+		41F5AE591D4C33C5001159ED /* TLMTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */; };
+		41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */; };
+		41F5AE5E1D4E74AA001159ED /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE5D1D4E74AA001159ED /* Localizable.strings */; };
+		41F5AE661D4E98E1001159ED /* heartActive@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE601D4E98E1001159ED /* heartActive@2x.png */; };
+		41F5AE671D4E98E1001159ED /* heartActive@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE611D4E98E1001159ED /* heartActive@3x.png */; };
+		41F5AE681D4E98E1001159ED /* heart@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE621D4E98E1001159ED /* heart@3x.png */; };
+		41F5AE691D4E98E1001159ED /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE631D4E98E1001159ED /* heart@2x.png */; };
+		41F5AE6A1D4E98E1001159ED /* heartActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE641D4E98E1001159ED /* heartActive.png */; };
+		41F5AE6B1D4E98E1001159ED /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE651D4E98E1001159ED /* heart.png */; };
+		41F5AE6F1D4ED007001159ED /* placeholder_600x400.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */; };
+		701DF574AF9B9543C9298CF8 /* libPods-AssignmentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +72,33 @@
 		41F5AE2F1D4AED1F001159ED /* AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssignmentUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F5AE331D4AED1F001159ED /* AssignmentUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AssignmentUITests.m; sourceTree = "<group>"; };
 		41F5AE351D4AED1F001159ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F5AE421D4B0A11001159ED /* TLMDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMDataSource.h; sourceTree = "<group>"; };
+		41F5AE431D4B0A11001159ED /* TLMDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMDataSource.m; sourceTree = "<group>"; };
+		41F5AE451D4B11D3001159ED /* TLMGalleryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMGalleryItem.h; sourceTree = "<group>"; };
+		41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMGalleryItem.m; sourceTree = "<group>"; };
+		41F5AE481D4BBB6D001159ED /* TLMNetworkingService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMNetworkingService.h; sourceTree = "<group>"; };
+		41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMNetworkingService.m; sourceTree = "<group>"; };
+		41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = GalleryAPIInfo.plist; sourceTree = "<group>"; };
+		41F5AE4F1D4C2648001159ED /* TLMSpinnerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMSpinnerViewController.h; sourceTree = "<group>"; };
+		41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMSpinnerViewController.m; sourceTree = "<group>"; };
+		41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLMSpinnerViewController.xib; sourceTree = "<group>"; };
+		41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TLMTableViewCell.h; sourceTree = "<group>"; };
+		41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TLMTableViewCell.m; sourceTree = "<group>"; };
+		41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TLMTableViewCell.xib; sourceTree = "<group>"; };
+		41F5AE5D1D4E74AA001159ED /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		41F5AE601D4E98E1001159ED /* heartActive@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartActive@2x.png"; sourceTree = "<group>"; };
+		41F5AE611D4E98E1001159ED /* heartActive@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heartActive@3x.png"; sourceTree = "<group>"; };
+		41F5AE621D4E98E1001159ED /* heart@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@3x.png"; sourceTree = "<group>"; };
+		41F5AE631D4E98E1001159ED /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
+		41F5AE641D4E98E1001159ED /* heartActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartActive.png; sourceTree = "<group>"; };
+		41F5AE651D4E98E1001159ED /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heart.png; sourceTree = "<group>"; };
+		41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_600x400.png; sourceTree = "<group>"; };
+		63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		CC319ECB00DA5BE6E2500A53 /* Pods-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AssignmentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB95231E14394E752633C7D8 /* libPods-Assignment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Assignment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				206BD13A188B50E29F1851B6 /* libPods-Assignment.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701DF574AF9B9543C9298CF8 /* libPods-AssignmentTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,13 +128,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25979DF84723DA2E3BD94383 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB95231E14394E752633C7D8 /* libPods-Assignment.a */,
+				F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		41F5ADFF1D4AED1F001159ED = {
 			isa = PBXGroup;
 			children = (
 				41F5AE0A1D4AED1F001159ED /* Assignment */,
 				41F5AE271D4AED1F001159ED /* AssignmentTests */,
-				41F5AE321D4AED1F001159ED /* AssignmentUITests */,
 				41F5AE091D4AED1F001159ED /* Products */,
+				9E8E3E64EF773298628AF961 /* Pods */,
+				25979DF84723DA2E3BD94383 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,12 +161,12 @@
 		41F5AE0A1D4AED1F001159ED /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE711D4F3099001159ED /* Networking */,
+				41F5AE701D4F2FE1001159ED /* ViewControllers */,
+				41F5AE5F1D4E98B8001159ED /* Images */,
+				41F5AE411D4B08E7001159ED /* DataSource */,
 				41F5AE0E1D4AED1F001159ED /* AppDelegate.h */,
 				41F5AE0F1D4AED1F001159ED /* AppDelegate.m */,
-				41F5AE111D4AED1F001159ED /* MasterViewController.h */,
-				41F5AE121D4AED1F001159ED /* MasterViewController.m */,
-				41F5AE141D4AED1F001159ED /* DetailViewController.h */,
-				41F5AE151D4AED1F001159ED /* DetailViewController.m */,
 				41F5AE171D4AED1F001159ED /* Main.storyboard */,
 				41F5AE1A1D4AED1F001159ED /* Assets.xcassets */,
 				41F5AE1C1D4AED1F001159ED /* LaunchScreen.storyboard */,
@@ -122,6 +179,8 @@
 		41F5AE0B1D4AED1F001159ED /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				41F5AE5C1D4E7488001159ED /* en.lproj */,
+				41F5AE321D4AED1F001159ED /* AssignmentUITests */,
 				41F5AE0C1D4AED1F001159ED /* main.m */,
 			);
 			name = "Supporting Files";
@@ -143,6 +202,77 @@
 				41F5AE351D4AED1F001159ED /* Info.plist */,
 			);
 			path = AssignmentUITests;
+			sourceTree = SOURCE_ROOT;
+		};
+		41F5AE411D4B08E7001159ED /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE4B1D4BFD26001159ED /* GalleryAPIInfo.plist */,
+				41F5AE421D4B0A11001159ED /* TLMDataSource.h */,
+				41F5AE431D4B0A11001159ED /* TLMDataSource.m */,
+				41F5AE451D4B11D3001159ED /* TLMGalleryItem.h */,
+				41F5AE461D4B11D3001159ED /* TLMGalleryItem.m */,
+			);
+			name = DataSource;
+			sourceTree = "<group>";
+		};
+		41F5AE5C1D4E7488001159ED /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE5D1D4E74AA001159ED /* Localizable.strings */,
+			);
+			name = en.lproj;
+			sourceTree = "<group>";
+		};
+		41F5AE5F1D4E98B8001159ED /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE651D4E98E1001159ED /* heart.png */,
+				41F5AE631D4E98E1001159ED /* heart@2x.png */,
+				41F5AE621D4E98E1001159ED /* heart@3x.png */,
+				41F5AE641D4E98E1001159ED /* heartActive.png */,
+				41F5AE601D4E98E1001159ED /* heartActive@2x.png */,
+				41F5AE611D4E98E1001159ED /* heartActive@3x.png */,
+				41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		41F5AE701D4F2FE1001159ED /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE141D4AED1F001159ED /* DetailViewController.h */,
+				41F5AE151D4AED1F001159ED /* DetailViewController.m */,
+				41F5AE111D4AED1F001159ED /* MasterViewController.h */,
+				41F5AE121D4AED1F001159ED /* MasterViewController.m */,
+				41F5AE4F1D4C2648001159ED /* TLMSpinnerViewController.h */,
+				41F5AE501D4C2648001159ED /* TLMSpinnerViewController.m */,
+				41F5AE511D4C2648001159ED /* TLMSpinnerViewController.xib */,
+				41F5AE561D4C33C5001159ED /* TLMTableViewCell.h */,
+				41F5AE571D4C33C5001159ED /* TLMTableViewCell.m */,
+				41F5AE581D4C33C5001159ED /* TLMTableViewCell.xib */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41F5AE711D4F3099001159ED /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				41F5AE481D4BBB6D001159ED /* TLMNetworkingService.h */,
+				41F5AE491D4BBB6D001159ED /* TLMNetworkingService.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		9E8E3E64EF773298628AF961 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */,
+				B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */,
+				B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */,
+				CC319ECB00DA5BE6E2500A53 /* Pods-AssignmentTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41F5AE381D4AED1F001159ED /* Build configuration list for PBXNativeTarget "Assignment" */;
 			buildPhases = (
+				DF378A49623B5C488537D92C /* [CP] Check Pods Manifest.lock */,
 				41F5AE041D4AED1F001159ED /* Sources */,
 				41F5AE051D4AED1F001159ED /* Frameworks */,
 				41F5AE061D4AED1F001159ED /* Resources */,
+				45E1C9ABC0A660AA8E5FEC7B /* [CP] Embed Pods Frameworks */,
+				D8AC7155A601B0A27FB34943 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -169,9 +302,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41F5AE3B1D4AED1F001159ED /* Build configuration list for PBXNativeTarget "AssignmentTests" */;
 			buildPhases = (
+				46890B0265AA742E296980A6 /* [CP] Check Pods Manifest.lock */,
 				41F5AE201D4AED1F001159ED /* Sources */,
 				41F5AE211D4AED1F001159ED /* Frameworks */,
 				41F5AE221D4AED1F001159ED /* Resources */,
+				52D0CF777A1840D563DE6A2D /* [CP] Embed Pods Frameworks */,
+				A884F32A7D99B12D2E2E230C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -248,9 +384,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F5AE4C1D4BFD26001159ED /* GalleryAPIInfo.plist in Resources */,
 				41F5AE1E1D4AED1F001159ED /* LaunchScreen.storyboard in Resources */,
+				41F5AE691D4E98E1001159ED /* heart@2x.png in Resources */,
+				41F5AE681D4E98E1001159ED /* heart@3x.png in Resources */,
+				41F5AE531D4C2648001159ED /* TLMSpinnerViewController.xib in Resources */,
+				41F5AE5E1D4E74AA001159ED /* Localizable.strings in Resources */,
 				41F5AE1B1D4AED1F001159ED /* Assets.xcassets in Resources */,
+				41F5AE6B1D4E98E1001159ED /* heart.png in Resources */,
 				41F5AE191D4AED1F001159ED /* Main.storyboard in Resources */,
+				41F5AE671D4E98E1001159ED /* heartActive@3x.png in Resources */,
+				41F5AE6F1D4ED007001159ED /* placeholder_600x400.png in Resources */,
+				41F5AE5A1D4C33C5001159ED /* TLMTableViewCell.xib in Resources */,
+				41F5AE6A1D4E98E1001159ED /* heartActive.png in Resources */,
+				41F5AE661D4E98E1001159ED /* heartActive@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,13 +417,111 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		45E1C9ABC0A660AA8E5FEC7B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Assignment/Pods-Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46890B0265AA742E296980A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52D0CF777A1840D563DE6A2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A884F32A7D99B12D2E2E230C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8AC7155A601B0A27FB34943 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Assignment/Pods-Assignment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF378A49623B5C488537D92C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		41F5AE041D4AED1F001159ED /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41F5AE521D4C2648001159ED /* TLMSpinnerViewController.m in Sources */,
 				41F5AE101D4AED1F001159ED /* AppDelegate.m in Sources */,
+				41F5AE471D4B11D3001159ED /* TLMGalleryItem.m in Sources */,
 				41F5AE131D4AED1F001159ED /* MasterViewController.m in Sources */,
+				41F5AE4A1D4BBB6D001159ED /* TLMNetworkingService.m in Sources */,
+				41F5AE441D4B0A11001159ED /* TLMDataSource.m in Sources */,
+				41F5AE591D4C33C5001159ED /* TLMTableViewCell.m in Sources */,
 				41F5AE0D1D4AED1F001159ED /* main.m in Sources */,
 				41F5AE161D4AED1F001159ED /* DetailViewController.m in Sources */,
 			);
@@ -419,10 +664,19 @@
 		};
 		41F5AE391D4AED1F001159ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Realm\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Realm/core\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TelmedIQ.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -430,6 +684,7 @@
 		};
 		41F5AE3A1D4AED1F001159ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Assignment/Info.plist;
@@ -441,10 +696,25 @@
 		};
 		41F5AE3C1D4AED1F001159ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Realm\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Realm/core\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TelmedIQ.AssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment.app/Assignment";
@@ -453,10 +723,24 @@
 		};
 		41F5AE3D1D4AED1F001159ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC319ECB00DA5BE6E2500A53 /* Pods-AssignmentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Realm\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Realm/core\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TelmedIQ.AssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment.app/Assignment";
@@ -504,6 +788,7 @@
 				41F5AE3A1D4AED1F001159ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41F5AE3B1D4AED1F001159ED /* Build configuration list for PBXNativeTarget "AssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +797,7 @@
 				41F5AE3D1D4AED1F001159ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41F5AE3E1D4AED1F001159ED /* Build configuration list for PBXNativeTarget "AssignmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +806,7 @@
 				41F5AE401D4AED1F001159ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

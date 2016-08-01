@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Client ID</key>
+	<string>917fbe7adfae1b7</string>
+	<key>Gallery API</key>
+	<string>https://api.imgur.com/3/gallery/hot/</string>
+</dict>
+</plist>

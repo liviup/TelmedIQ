@@ -2,28 +2,54 @@
 //  MasterViewController.m
 //  Assignment
 //
-//  Created by Tatiana Patrasco on 7/28/16.
+//  Created by Liviu Patrasco on 7/28/16.
 //  Copyright © 2016 Liviu Patrasco. All rights reserved.
 //
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "TLMDataSource.h"
+#import "TLMGalleryItem.h"
+#import "TLMSpinnerViewController.h"
+#import "TLMTableViewCell.h"
+#import <AFNetworkReachabilityManager.h>
 
-@interface MasterViewController ()
+static NSInteger const kCellViewHeight = 250;
+static NSString *const kDetailSegueID = @"showDetail";
+static NSString *const kCellIdentifier = @"TLMPreviewCell";
 
-@property NSMutableArray *objects;
+@interface MasterViewController () <TLMDataSourceDelegate>
+
+@property TLMDataSource *dataSource;
+@property (nonatomic, strong) TLMSpinnerViewController *spinner;
 @end
 
 @implementation MasterViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"TLMTableViewCell" bundle:nil] forCellReuseIdentifier:kCellIdentifier];
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    self.dataSource = [[TLMDataSource alloc] initWithDelegate:self];
+    
+    __weak typeof(self) weakSelf = self;
+    [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        switch (status) {
+            case AFNetworkReachabilityStatusReachableViaWWAN:
+            case AFNetworkReachabilityStatusReachableViaWiFi:
+                [weakSelf reload];
+                break;
+                
+            default:
+                break;
+        }
+    }];
+
+    self.spinner = [[TLMSpinnerViewController alloc] init];
+    [self reload];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -33,26 +59,22 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+- (void)reload {
+    
+    [self.spinner presentInView:self.tableView];
+    [self.dataSource reload];
 }
 
 #pragma mark - Segues
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:kDetailSegueID]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = self.objects[indexPath.row];
+        TLMGalleryItem *item = [self.dataSource itemAtIndex:indexPath.row];
         DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
-        [controller setDetailItem:object];
+        [controller setDetailItem:item];
         controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
         controller.navigationItem.leftItemsSupplementBackButton = YES;
     }
@@ -65,29 +87,29 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.objects.count;
+    return [self.dataSource numberOfItems];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    TLMTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellIdentifier forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    [cell configureWithGalleryItem:[self.dataSource itemAtIndex:indexPath.row]];
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:kDetailSegueID sender:self];
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return kCellViewHeight;
+}
+
+#pragma mark - TLMDataSourceDelegate
+
+- (void)dataSourceDidLoad {
+    [self.tableView reloadData];
+    [self.spinner stopSpinning];
 }
 
 @end
