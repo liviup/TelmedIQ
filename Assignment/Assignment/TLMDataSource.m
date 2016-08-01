@@ -81,7 +81,7 @@
 
 - (void)updateResults {
     RLMRealm *realm = [RLMRealm defaultRealm];
-    self.data = [[TLMGalleryItem objectsInRealm:realm where:@"type BEGINSWITH[c] 'image'"] sortedResultsUsingProperty:@"datetime" ascending:YES];
+    self.data = [[TLMGalleryItem objectsInRealm:realm where:@"type BEGINSWITH[c] 'image'"] sortedResultsUsingProperty:@"datetime" ascending:NO];
     [self.delegate dataSourceDidLoad];
 }
 
