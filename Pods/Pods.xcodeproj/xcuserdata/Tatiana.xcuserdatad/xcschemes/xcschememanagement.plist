@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-AssignmentTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Realm.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>A27CEBD83B612BCEF64427E630361664</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D5E822B0E0647188856FB7AA137DD378</key>
 		<dict>
 			<key>primary</key>
 			<true/>

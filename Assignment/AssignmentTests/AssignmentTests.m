@@ -8,11 +8,12 @@
 
 #import <XCTest/XCTest.h>
 #import "TLMDataSource.h"
-#import "TLMGalleryItem.h"
 #import "TLMNetworkingService.h"
+#import <Realm/Realm.h>
+#import "TLMGalleryItem.h"
 
-@interface AssignmentTests : XCTestCase
-
+@interface AssignmentTests : XCTestCase <TLMDataSourceDelegate>
+@property (nonatomic, strong) TLMDataSource *dataSource;
 @end
 
 @implementation AssignmentTests
@@ -27,16 +28,25 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+- (void)testLoadingDataSource {
+    
+    TLMDataSource *dataSource = [[TLMDataSource alloc] initWithDelegate:self];
+    self.dataSource = dataSource;
+    [dataSource reload];
 }
 
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
+- (void)testFavoritingItem {
+    RLMRealm *realm = [RLMRealm defaultRealm];
+    TLMGalleryItem *item = [[TLMGalleryItem allObjects] firstObject];
+    XCTAssertFalse(item.favorite, @"Item should not be favorite item");
+    [realm beginWriteTransaction];
+    item.favorite = YES;
+    [realm commitWriteTransaction];
+    XCTAssertTrue(item.favorite, @"Item should be favorite item");
+}
+
+- (void)dataSourceDidLoad {
+    XCTAssertTrue(self.dataSource.numberOfItems > 0);
 }
 
 @end

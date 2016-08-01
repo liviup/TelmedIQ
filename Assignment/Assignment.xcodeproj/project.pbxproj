@@ -34,6 +34,7 @@
 		41F5AE6B1D4E98E1001159ED /* heart.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE651D4E98E1001159ED /* heart.png */; };
 		41F5AE6D1D4E98FA001159ED /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE6C1D4E98FA001159ED /* placeholder.png */; };
 		41F5AE6F1D4ED007001159ED /* placeholder_600x400.png in Resources */ = {isa = PBXBuildFile; fileRef = 41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */; };
+		701DF574AF9B9543C9298CF8 /* libPods-AssignmentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +96,10 @@
 		41F5AE6C1D4E98FA001159ED /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		41F5AE6E1D4ED007001159ED /* placeholder_600x400.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder_600x400.png; sourceTree = "<group>"; };
 		63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
+		B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentTests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Assignment.release.xcconfig"; path = "../Pods/Target Support Files/Pods-Assignment/Pods-Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		CC319ECB00DA5BE6E2500A53 /* Pods-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssignmentTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AssignmentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB95231E14394E752633C7D8 /* libPods-Assignment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Assignment.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -112,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				701DF574AF9B9543C9298CF8 /* libPods-AssignmentTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				FB95231E14394E752633C7D8 /* libPods-Assignment.a */,
+				F0652DEB6BD47E6D96219B70 /* libPods-AssignmentTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -250,6 +256,8 @@
 			children = (
 				63FFCB18EDBC7F3863E965EE /* Pods-Assignment.debug.xcconfig */,
 				B4CE47B3CFE88F9CB498750C /* Pods-Assignment.release.xcconfig */,
+				B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */,
+				CC319ECB00DA5BE6E2500A53 /* Pods-AssignmentTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -281,9 +289,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41F5AE3B1D4AED1F001159ED /* Build configuration list for PBXNativeTarget "AssignmentTests" */;
 			buildPhases = (
+				46890B0265AA742E296980A6 /* [CP] Check Pods Manifest.lock */,
 				41F5AE201D4AED1F001159ED /* Sources */,
 				41F5AE211D4AED1F001159ED /* Frameworks */,
 				41F5AE221D4AED1F001159ED /* Resources */,
+				52D0CF777A1840D563DE6A2D /* [CP] Embed Pods Frameworks */,
+				A884F32A7D99B12D2E2E230C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -408,6 +419,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-Assignment/Pods-Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46890B0265AA742E296980A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		52D0CF777A1840D563DE6A2D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A884F32A7D99B12D2E2E230C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-AssignmentTests/Pods-AssignmentTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D8AC7155A601B0A27FB34943 /* [CP] Copy Pods Resources */ = {
@@ -601,6 +657,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Assignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Realm\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Realm/core\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TelmedIQ.Assignment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -620,10 +684,25 @@
 		};
 		41F5AE3C1D4AED1F001159ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B26A5ECD045AD9F4206FB391 /* Pods-AssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Realm\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Realm/core\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TelmedIQ.AssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment.app/Assignment";
@@ -632,10 +711,24 @@
 		};
 		41F5AE3D1D4AED1F001159ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CC319ECB00DA5BE6E2500A53 /* Pods-AssignmentTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+				);
 				INFOPLIST_FILE = AssignmentTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/AFNetworking\"",
+					"\"$PODS_CONFIGURATION_BUILD_DIR/Realm\"",
+					"$(inherited)",
+					"\"${PODS_ROOT}/Realm/core\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.TelmedIQ.AssignmentTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Assignment.app/Assignment";
