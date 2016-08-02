@@ -18,6 +18,7 @@ static NSString *const kKeyPathToObserve = @"favorite";
  * @brief Heart button to un/favorite item.
  */
 @property (nonatomic, weak) IBOutlet UIButton *favoriteButton;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -40,7 +41,7 @@ static NSString *const kKeyPathToObserve = @"favorite";
 - (void)configureView {
     // Update the user interface for the detail item.
     if (self.detailItem && !self.detailItem.nsfw) {
-        [self.imageView setImageWithURL:[NSURL URLWithString:self.detailItem.link] placeholderImage:[UIImage imageNamed:@"placeholder_600x400"]];
+        [self setImageWithItem:self.detailItem];
         self.favoriteButton.selected = self.detailItem.favorite;
     }
 }
@@ -63,6 +64,29 @@ static NSString *const kKeyPathToObserve = @"favorite";
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(TLMGalleryItem *)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:kKeyPathToObserve]) {
         self.favoriteButton.selected = object.favorite;
+    }
+}
+
+- (void)setImageWithItem:(TLMGalleryItem *)item {
+    NSURL *url = item.link ? [NSURL URLWithString:item.link] : nil;
+    if (url) {
+        [self.spinner startAnimating];
+        self.spinner.hidden = NO;
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+        [request addValue:@"image/*" forHTTPHeaderField:@"Accept"];
+        
+        __weak __typeof(self)weakSelf = self;
+        [self.imageView setImageWithURLRequest:request
+                                     placeholderImage:[UIImage imageNamed:@"placeholder_600x400"]
+                                              success:^(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, UIImage *image) {
+                                                  weakSelf.imageView.image = image;
+                                                  [weakSelf.spinner stopAnimating];
+                                                  weakSelf.spinner.hidden = YES;
+                                              }
+                                              failure:^(NSURLRequest *request, NSHTTPURLResponse * _Nullable response, NSError *error) {
+                                                  [weakSelf.spinner stopAnimating];
+                                                  weakSelf.spinner.hidden = YES;
+                                              }];
     }
 }
 
