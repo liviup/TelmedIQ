@@ -10,6 +10,8 @@
 #import "TLMGalleryItem.h"
 #import <UIImageView+AFNetworking.h>
 
+static NSString *const kKeyPathToObserve = @"favorite";
+
 @interface DetailViewController ()
 
 /**
@@ -25,7 +27,10 @@
 
 - (void)setDetailItem:(id)newDetailItem {
     if (_detailItem != newDetailItem) {
+        
+        [_detailItem removeObserver:self forKeyPath:kKeyPathToObserve];
         _detailItem = newDetailItem;
+        [_detailItem addObserver:self forKeyPath:@"favorite" options:NSKeyValueObservingOptionNew context:nil];
         
         // Update the view.
         [self configureView];
@@ -53,6 +58,12 @@
     [realm transactionWithBlock:^{
         item.favorite = sender.selected;
     }];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(TLMGalleryItem *)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
+    if ([keyPath isEqualToString:kKeyPathToObserve]) {
+        self.favoriteButton.selected = object.favorite;
+    }
 }
 
 @end
