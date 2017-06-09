@@ -31,7 +31,7 @@ static NSString *const kKeyPathToObserve = @"favorite";
         
         [_detailItem removeObserver:self forKeyPath:kKeyPathToObserve];
         _detailItem = newDetailItem;
-        [_detailItem addObserver:self forKeyPath:@"favorite" options:NSKeyValueObservingOptionNew context:nil];
+        [_detailItem addObserver:self forKeyPath:kKeyPathToObserve options:NSKeyValueObservingOptionNew context:nil];
         
         // Update the view.
         [self configureView];

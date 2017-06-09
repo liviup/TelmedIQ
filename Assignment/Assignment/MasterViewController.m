@@ -17,6 +17,7 @@
 static NSInteger const kCellViewHeight = 250;
 static NSString *const kDetailSegueID = @"showDetail";
 static NSString *const kCellIdentifier = @"TLMPreviewCell";
+static NSString *const kNibName = @"TLMTableViewCell";
 
 @interface MasterViewController () <TLMDataSourceDelegate>
 
@@ -29,7 +30,7 @@ static NSString *const kCellIdentifier = @"TLMPreviewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"TLMTableViewCell" bundle:nil] forCellReuseIdentifier:kCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:kNibName bundle:nil] forCellReuseIdentifier:kCellIdentifier];
 
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
