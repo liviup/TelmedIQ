@@ -53,12 +53,14 @@ static NSString *const kKeyPathToObserve = @"favorite";
 }
 
 - (IBAction)toggleFavorite:(UIButton *)sender {
-    sender.selected = !sender.selected;
-    RLMRealm *realm = [RLMRealm defaultRealm];
-    TLMGalleryItem *item = self.detailItem;
-    [realm transactionWithBlock:^{
-        item.favorite = sender.selected;
-    }];
+    if (!self.spinner.isAnimating) {
+        sender.selected = !sender.selected;
+        RLMRealm *realm = [RLMRealm defaultRealm];
+        TLMGalleryItem *item = self.detailItem;
+        [realm transactionWithBlock:^{
+            item.favorite = sender.selected;
+        }];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(TLMGalleryItem *)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
