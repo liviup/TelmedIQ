@@ -110,9 +110,11 @@ static NSString *const kNibName = @"TLMTableViewCell";
 
 - (void)dataSourceDidLoad {
     [self.tableView reloadData];
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.detailViewController setDetailItem:[self.dataSource itemAtIndex:0]];
-    });
+    if ([self.dataSource numberOfItems] > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.detailViewController setDetailItem:[self.dataSource itemAtIndex:0]];
+        });
+    }
     [self.spinner stopSpinning];
 }
 
